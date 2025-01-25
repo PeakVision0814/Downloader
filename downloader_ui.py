@@ -7,7 +7,7 @@ class DownloaderApp:
     def __init__(self, root):
         self.root = root
         self.root.title("软件下载器")
-        self.root.geometry("600x300")
+        self.root.geometry("550x300")
         self.root.resizable(False, False)  # 禁止窗口宽度和高度的调整
 
         # 下载选项
