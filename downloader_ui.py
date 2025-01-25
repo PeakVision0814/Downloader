@@ -8,6 +8,7 @@ class DownloaderApp:
         self.root = root
         self.root.title("软件下载器")
         self.root.geometry("600x300")
+        self.root.resizable(False, False)  # 禁止窗口宽度和高度的调整
 
         # 下载选项
         self.options = {
