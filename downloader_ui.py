@@ -34,49 +34,49 @@ class DownloaderApp:
         row = 0  # 初始行数
 
         # 软件选择行
-        Label(root, text="选择要下载的软件：").grid(row=row, column=0, sticky="w", padx=10, pady=5)
+        Label(root, text="选择要下载的软件：").grid(row=row, column=0, sticky="w", padx=20, pady=5)
         self.option_menu = ttk.Combobox(root, values=list(self.options.keys()), textvariable=self.download_url, state="readonly")
-        self.option_menu.grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        self.option_menu.grid(row=row, column=1, sticky="ew", padx=20, pady=5)
         self.option_menu.bind("<<ComboboxSelected>>", self.update_download_link)
         row += 1
 
         # 下载链接行
-        Label(root, text="下载链接：").grid(row=row, column=0, sticky="w", padx=10, pady=5)
+        Label(root, text="下载链接：").grid(row=row, column=0, sticky="w", padx=20, pady=5)
         self.link_entry = Entry(root, textvariable=self.custom_link, width=50)
-        self.link_entry.grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        self.link_entry.grid(row=row, column=1, sticky="ew", padx=20, pady=5)
         row += 1
 
         # 保存路径行
-        Label(root, text="下载保存路径：").grid(row=row, column=0, sticky="w", padx=10, pady=5)
+        Label(root, text="下载保存路径：").grid(row=row, column=0, sticky="w", padx=20, pady=5)
         path_frame = ttk.Frame(root)
-        path_frame.grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        path_frame.grid(row=row, column=1, sticky="ew", padx=20, pady=5)
 
         self.path_entry = Entry(path_frame, textvariable=self.download_path, state="readonly", width=40)
-        self.path_entry.pack(side="left", fill="x", expand=True, padx=5)
+        self.path_entry.pack(side="left", fill="x", expand=True, padx=0)
         self.browse_button = Button(path_frame, text="浏览", command=self.browse_path)
         self.browse_button.pack(side="right")
         row += 1
 
         # 进度条
         self.progress = ttk.Progressbar(root, orient="horizontal", length=400, mode="determinate")
-        self.progress.grid(row=row, column=0, columnspan=2, sticky="ew", padx=10, pady=10)
+        self.progress.grid(row=row, column=0, columnspan=2, sticky="ew", padx=20, pady=10)
         row += 1
 
         # 状态信息
         self.status_label = Label(root, text="", fg="blue")
-        self.status_label.grid(row=row, column=0, columnspan=2, sticky="w", padx=10, pady=5)
+        self.status_label.grid(row=row, column=0, columnspan=2, sticky="w", padx=20, pady=5)
         row += 1
 
         self.speed_label = Label(root, text="下载速度: 0 KB/s", fg="green")  # 显示下载速度
-        self.speed_label.grid(row=row, column=0, columnspan=2, sticky="w", padx=10, pady=5)
+        self.speed_label.grid(row=row, column=0, columnspan=2, sticky="w", padx=20, pady=5)
         row += 1
 
         # 操作按钮
         self.download_button = Button(root, text="开始下载", command=self.toggle_download)
-        self.download_button.grid(row=row, column=0, sticky="w", padx=10, pady=10)
+        self.download_button.grid(row=row, column=0, sticky="w", padx=20, pady=10)
 
         self.pause_button = Button(root, text="暂停下载", command=self.pause_download, state="disabled")
-        self.pause_button.grid(row=row, column=1, sticky="e", padx=10, pady=10)
+        self.pause_button.grid(row=row, column=1, sticky="e", padx=20, pady=10)
 
         # 下载控制
         self.thread = None
