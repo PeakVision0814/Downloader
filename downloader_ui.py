@@ -7,19 +7,20 @@ class DownloaderApp:
     def __init__(self, root):
         self.root = root
         self.root.title("软件下载器")
-        self.root.geometry("500x350")
+        self.root.geometry("600x400")
 
         # 下载选项
         self.options = {
-            "请选择需下载的软件": None,  # 新增提示选项
+            "请选择需下载的软件": None,
             "VSCode (Windows 64位)": "https://update.code.visualstudio.com/latest/win32-x64/stable",
             "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
-            "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe", # 修正为微信下载地址
+            "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
         }
 
         self.download_url = StringVar()
         self.download_url.set("请选择需下载的软件")  # 默认选项
+        self.custom_link = StringVar()  # 自定义下载链接
         self.download_path = StringVar()  # 保存下载路径
         self.download_path.set("选择保存路径...")  # 默认显示提示
 
@@ -33,6 +34,11 @@ class DownloaderApp:
         Label(root, text="选择要下载的软件：").pack(pady=5)
         self.option_menu = ttk.Combobox(root, values=list(self.options.keys()), textvariable=self.download_url, state="readonly")
         self.option_menu.pack(pady=5)
+        self.option_menu.bind("<<ComboboxSelected>>", self.update_download_link)  # 绑定选择事件
+
+        Label(root, text="下载链接：").pack(pady=5)
+        self.link_entry = Entry(root, textvariable=self.custom_link, width=60)
+        self.link_entry.pack(pady=5)
 
         Label(root, text="下载保存路径：").pack(pady=5)
         path_frame = ttk.Frame(root)
@@ -69,6 +75,12 @@ class DownloaderApp:
         if folder_selected:
             self.download_path.set(folder_selected)
 
+    def update_download_link(self, event):
+        """更新下载链接"""
+        selected_software = self.download_url.get()
+        default_link = self.options.get(selected_software, "")
+        self.custom_link.set(default_link)  # 将默认链接显示到输入框中
+
     def toggle_download(self):
         """切换下载状态（开始或继续下载）"""
         if not self.is_paused:  # 开始下载
@@ -85,7 +97,7 @@ class DownloaderApp:
             messagebox.showwarning("警告", "请选择需下载的软件")
             return
 
-        self.current_url = self.options[selected_software]
+        self.current_url = self.custom_link.get()
         save_dir = self.download_path.get()
 
         if save_dir == "选择保存路径..." or not save_dir:
