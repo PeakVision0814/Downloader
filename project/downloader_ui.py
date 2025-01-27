@@ -19,6 +19,7 @@ class DownloaderApp:
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
             "Todesk 4.7.6.2": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.2.exe",
+            "网易邮箱大师 5": "https://res.126.net/dl/client/pcmail/dashi/mail5.exe?action=banner_win_dl&device_id=e54264ff840a8ca99555b2a2249068a8_v1&os_version=10&uuid=31ac795b-27db-43fa-9ac4-c11f034ca5c1&device=desktop&os=Windows&product=mailwin&resolution=2560x1600"
         }
 
         # 设置窗口图标
@@ -145,6 +146,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "HiBitUninstaller-setup-3.2.50.exe")
         elif selected_software == "Todesk 4.7.6.2":
             self.current_save_path = os.path.join(save_dir, "ToDesk_setup_4.7.6.2.exe")
+        elif selected_software == "网易邮箱大师 5":
+            self.current_save_path = os.path.join(save_dir, "mail5.exe")
         else:
             self.current_save_path = os.path.join(save_dir, download_link.split("/")[-1])  # 使用链接中的文件名
 
