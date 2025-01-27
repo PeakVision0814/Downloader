@@ -13,11 +13,12 @@ class DownloaderApp:
         # 下载选项
         self.options = {
             "请选择需下载的软件": None,
+            "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
             "VSCode (Windows 64位)": "https://update.code.visualstudio.com/latest/win32-x64/stable",
             "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
-            "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
+            "Todesk 4.7.6.2": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.2.exe",
         }
 
         # 设置窗口图标
@@ -142,6 +143,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "WeChatSetup.exe")
         elif selected_software == "HiBit Uninstaller 3.2.50":
             self.current_save_path = os.path.join(save_dir, "HiBitUninstaller-setup-3.2.50.exe")
+        elif selected_software == "Todesk 4.7.6.2":
+            self.current_save_path = os.path.join(save_dir, "ToDesk_setup_4.7.6.2.exe")
         else:
             self.current_save_path = os.path.join(save_dir, download_link.split("/")[-1])  # 使用链接中的文件名
 
