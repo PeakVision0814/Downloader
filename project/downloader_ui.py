@@ -20,6 +20,7 @@ class DownloaderApp:
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
             "QQ 9.9.17_250110": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.17_250110_x64_01.exe",
+            "腾讯会议 3.30.30.420": "https://updatecdn.meeting.qq.com/cos/9b68d1c34ad9cb13503c0e143bedf644/TencentMeeting_0300000000_3.30.30.420_x86_64.publish.officialwebsite.exe",
             "Todesk 4.7.6.2": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.2.exe",
             "网易邮箱大师 5": "https://res.126.net/dl/client/pcmail/dashi/mail5.exe?action=banner_win_dl&device_id=e54264ff840a8ca99555b2a2249068a8_v1&os_version=10&uuid=31ac795b-27db-43fa-9ac4-c11f034ca5c1&device=desktop&os=Windows&product=mailwin&resolution=2560x1600",
             "OBS Studio 31.0.1": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.1-Windows-Installer.exe",
@@ -149,6 +150,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "WeChatSetup.exe")
         elif selected_software == "QQ 9.9.17_250110":
             self.current_save_path = os.path.join(save_dir, "QQ_9.9.17_250110_x64_01.exe")
+        elif selected_software == "腾讯会议 3.30.30.420":
+            self.current_save_path = os.path.join(save_dir, "TencentMeeting_0300000000_3.30.30.420_x86_64.publish.officialwebsite.exe")
         elif selected_software == "HiBit Uninstaller 3.2.50":
             self.current_save_path = os.path.join(save_dir, "HiBitUninstaller-setup-3.2.50.exe")
         elif selected_software == "Todesk 4.7.6.2":
