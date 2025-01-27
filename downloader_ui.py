@@ -10,8 +10,6 @@ class DownloaderApp:
         self.root.geometry("550x300")
         self.root.resizable(False, False)  # 禁止窗口宽度和高度的调整
 
-
-
         # 下载选项
         self.options = {
             "请选择需下载的软件": None,
@@ -19,6 +17,7 @@ class DownloaderApp:
             "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
+            "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
         }
 
         # 设置窗口图标
@@ -141,6 +140,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "BANDIZIP-SETUP-STD-X64.exe")
         elif selected_software == "微信":
             self.current_save_path = os.path.join(save_dir, "WeChatSetup.exe")
+        elif selected_software == "HiBit Uninstaller 3.2.50":
+            self.current_save_path = os.path.join(save_dir, "HiBitUninstaller-setup-3.2.50.exe")
         else:
             self.current_save_path = os.path.join(save_dir, download_link.split("/")[-1])  # 使用链接中的文件名
 

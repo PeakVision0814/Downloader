@@ -10,6 +10,7 @@
   - VSCode (Windows 64位)
   - Python 3.12.8 (Windows 64位)
   - Bandizip
+  - 微信
   - （可轻松扩展更多软件）
   
 - **断点续传**：
