@@ -15,6 +15,7 @@ class DownloaderApp:
             "请选择需下载的软件": None,
             "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
             "VSCode (Windows 64位)": "https://update.code.visualstudio.com/latest/win32-x64/stable",
+            "Honeyview": "https://dl.bandisoft.com/honeyview/HONEYVIEW-SETUP.EXE?2024",
             "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
@@ -140,6 +141,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "VSCodeSetup.exe")
         elif selected_software == "Python 3.12.8 (Windows 64位)":
             self.current_save_path = os.path.join(save_dir, "python-3.12.8-amd64.exe")
+        elif selected_software == "Honeyview":
+            self.current_save_path = os.path.join(save_dir, "HONEYVIEW-SETUP.EXE")
         elif selected_software == "Bandizip":
             self.current_save_path = os.path.join(save_dir, "BANDIZIP-SETUP-STD-X64.exe")
         elif selected_software == "微信":
