@@ -18,6 +18,7 @@ class DownloaderApp:
             "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
+            "QQ 9.9.17_250110": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.17_250110_x64_01.exe",
             "Todesk 4.7.6.2": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.2.exe",
             "网易邮箱大师 5": "https://res.126.net/dl/client/pcmail/dashi/mail5.exe?action=banner_win_dl&device_id=e54264ff840a8ca99555b2a2249068a8_v1&os_version=10&uuid=31ac795b-27db-43fa-9ac4-c11f034ca5c1&device=desktop&os=Windows&product=mailwin&resolution=2560x1600"
         }
@@ -142,6 +143,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "BANDIZIP-SETUP-STD-X64.exe")
         elif selected_software == "微信":
             self.current_save_path = os.path.join(save_dir, "WeChatSetup.exe")
+        elif selected_software == "QQ 9.9.17_250110":
+            self.current_save_path = os.path.join(save_dir, "QQ_9.9.17_250110_x64_01.exe")
         elif selected_software == "HiBit Uninstaller 3.2.50":
             self.current_save_path = os.path.join(save_dir, "HiBitUninstaller-setup-3.2.50.exe")
         elif selected_software == "Todesk 4.7.6.2":
