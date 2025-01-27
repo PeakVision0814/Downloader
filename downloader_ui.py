@@ -10,6 +10,8 @@ class DownloaderApp:
         self.root.geometry("550x300")
         self.root.resizable(False, False)  # 禁止窗口宽度和高度的调整
 
+
+
         # 下载选项
         self.options = {
             "请选择需下载的软件": None,
@@ -18,6 +20,14 @@ class DownloaderApp:
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
         }
+
+        # 设置窗口图标
+        icon_path = os.path.join("icon", "download_icon.ico")
+        if os.path.exists(icon_path):
+            self.root.iconbitmap(icon_path)  # 使用 .ico 文件
+        else:
+            print("图标文件未找到！请检查路径。")
+
 
         self.download_url = StringVar()
         self.download_url.set("请选择需下载的软件")  # 默认选项
