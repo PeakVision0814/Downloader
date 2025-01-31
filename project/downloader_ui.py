@@ -16,6 +16,7 @@ class DownloaderApp:
             "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
             "VSCode (Windows 64位)": "https://update.code.visualstudio.com/latest/win32-x64/stable",
             "Honeyview": "https://dl.bandisoft.com/honeyview/HONEYVIEW-SETUP.EXE?2024",
+            "Everything 1.4.1.1026": "https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe",
             "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
@@ -148,6 +149,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "BANDIZIP-SETUP-STD-X64.exe")
         elif selected_software == "微信":
             self.current_save_path = os.path.join(save_dir, "WeChatSetup.exe")
+        elif selected_software == "Everything 1.4.1.1026":
+            self.current_save_path = os.path.join(save_dir, "Everything-1.4.1.1026.x64-Setup.exe")
         elif selected_software == "QQ 9.9.17_250110":
             self.current_save_path = os.path.join(save_dir, "QQ_9.9.17_250110_x64_01.exe")
         elif selected_software == "腾讯会议 3.30.30.420":
