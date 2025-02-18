@@ -25,6 +25,7 @@ class DownloaderApp:
             "Todesk 4.7.6.2": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.2.exe",
             "网易邮箱大师 5": "https://res.126.net/dl/client/pcmail/dashi/mail5.exe?action=banner_win_dl&device_id=e54264ff840a8ca99555b2a2249068a8_v1&os_version=10&uuid=31ac795b-27db-43fa-9ac4-c11f034ca5c1&device=desktop&os=Windows&product=mailwin&resolution=2560x1600",
             "OBS Studio 31.0.1": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.1-Windows-Installer.exe",
+            "百度网盘": "https://ef7d0d-1882103687.antpcdn.com:19001/b/pkg-ant.baidu.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.52.0.135.exe",
         }
 
         # 设置窗口图标
@@ -163,6 +164,8 @@ class DownloaderApp:
             self.current_save_path = os.path.join(save_dir, "mail5.exe")
         elif selected_software == "OBS Studio 31.0.1":
             self.current_save_path = os.path.join(save_dir, "OBS-Studio-31.0.1-Windows-Installer.exe")
+        elif selected_software == "百度网盘":
+            self.current_save_path = os.path.join(save_dir, "BaiduNetdisk_7.52.0.135.exe")
         else:
             self.current_save_path = os.path.join(save_dir, download_link.split("/")[-1])  # 使用链接中的文件名
 
