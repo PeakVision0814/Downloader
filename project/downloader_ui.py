@@ -13,7 +13,6 @@ class DownloaderApp:
         # 下载选项
         self.options = {
             "请选择需下载的软件": None,
-            "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
             "VSCode (Windows 64位)": "https://update.code.visualstudio.com/latest/win32-x64/stable",
             "Honeyview": "https://dl.bandisoft.com/honeyview/HONEYVIEW-SETUP.EXE?2024",
             "Everything 1.4.1.1026": "https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe",
@@ -26,6 +25,7 @@ class DownloaderApp:
             "网易邮箱大师 5": "https://res.126.net/dl/client/pcmail/dashi/mail5.exe?action=banner_win_dl&device_id=e54264ff840a8ca99555b2a2249068a8_v1&os_version=10&uuid=31ac795b-27db-43fa-9ac4-c11f034ca5c1&device=desktop&os=Windows&product=mailwin&resolution=2560x1600",
             "OBS Studio 31.0.1": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.1-Windows-Installer.exe",
             "百度网盘": "https://ef7d0d-1882103687.antpcdn.com:19001/b/pkg-ant.baidu.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.52.0.135.exe",
+            "HiBit Uninstaller 3.2.50": "https://www.hibitsoft.ir/HiBitUninstaller/HiBitUninstaller-setup-3.2.50.exe",
         }
 
         # 设置窗口图标
