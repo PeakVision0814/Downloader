@@ -16,7 +16,8 @@ class DownloaderApp:
             "VSCode (Windows 64位)": "https://update.code.visualstudio.com/latest/win32-x64/stable",
             "Honeyview": "https://dl.bandisoft.com/honeyview/HONEYVIEW-SETUP.EXE?2024",
             "Everything 1.4.1.1026": "https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe",
-            "Python 3.12.8 (Windows 64位)": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
+            "Python 3.9.0 (Windows 64位)": "https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe",
+            "Anconda 2023.3.1 (Windows 64位)": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2023.03-1-Windows-x86_64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
             "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
             "QQ 9.9.17_250110": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.17_250110_x64_01.exe",
@@ -142,8 +143,10 @@ class DownloaderApp:
         # 针对不同软件设置保存文件名
         if selected_software == "VSCode (Windows 64位)":
             self.current_save_path = os.path.join(save_dir, "VSCodeSetup.exe")
-        elif selected_software == "Python 3.12.8 (Windows 64位)":
-            self.current_save_path = os.path.join(save_dir, "python-3.12.8-amd64.exe")
+        elif selected_software == "Python 3.9.0 (Windows 64位)":
+            self.current_save_path = os.path.join(save_dir, "python-3.9.0-amd64.exe")
+        elif selected_software == "Anconda 2023.3.1 (Windows 64位)":
+            self.current_save_path = os.path.join(save_dir, "Anaconda3-2023.03-1-Windows-x86_64.exe")
         elif selected_software == "Honeyview":
             self.current_save_path = os.path.join(save_dir, "HONEYVIEW-SETUP.EXE")
         elif selected_software == "Bandizip":
