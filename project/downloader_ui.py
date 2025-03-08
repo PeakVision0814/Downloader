@@ -19,7 +19,7 @@ class DownloaderApp:
             "Python 3.9.0 (Windows 64位)": "https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe",
             "Anconda 2023.3.1 (Windows 64位)": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2023.03-1-Windows-x86_64.exe",
             "Bandizip": "https://www.bandisoft.com/bandizip/dl.php?web",
-            "微信": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe",
+            "微信": "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin.exe",
             "QQ 9.9.17_250110": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.17_250110_x64_01.exe",
             "腾讯会议 3.30.30.420": "https://updatecdn.meeting.qq.com/cos/9b68d1c34ad9cb13503c0e143bedf644/TencentMeeting_0300000000_3.30.30.420_x86_64.publish.officialwebsite.exe",
             "Todesk 4.7.6.2": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.2.exe",
@@ -152,7 +152,7 @@ class DownloaderApp:
         elif selected_software == "Bandizip":
             self.current_save_path = os.path.join(save_dir, "BANDIZIP-SETUP-STD-X64.exe")
         elif selected_software == "微信":
-            self.current_save_path = os.path.join(save_dir, "WeChatSetup.exe")
+            self.current_save_path = os.path.join(save_dir, "WeChatWin.exe")
         elif selected_software == "Everything 1.4.1.1026":
             self.current_save_path = os.path.join(save_dir, "Everything-1.4.1.1026.x64-Setup.exe")
         elif selected_software == "QQ 9.9.17_250110":
